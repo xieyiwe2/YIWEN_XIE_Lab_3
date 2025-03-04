@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (geocoderContainer) {
         geocoderContainer.appendChild(geocoder.onAdd(map));
     } else {
-        console.error("❌ 'geocoder' element not found!");
+        console.error("!'geocoder' element not found!");
     }
 });
 
