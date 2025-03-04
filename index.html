@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Yoga-yoga Map</title>  
+
+    <!--- Import Mapbox GL JS for interactive maps-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.css' rel='stylesheet' />
+
+<!--Import Mapbox Geocoder plugin for search functionality -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.3/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.3/mapbox-gl-geocoder.css" type="text/css">
+
+    <!-- Import Bootstrap for styling and layout -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Import external CSS for additional styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* The main container for the map, ensuring it occupies the available space */
+        .map-container {
+            position: absolute;
+            top: 50px;  
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 80px); 
+        }
+
+        /* Sidebar container for filter controls */
+        .map-data-container {
+            position: absolute;
+            top: 70px;
+            right: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        /* Container for the search bar, positioned at the top left */
+        .map-search-container {
+            position: absolute;
+            top: 80px; /* Ensures it does not overlap with the header */
+            left: 20px;
+            width: 260px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1500; /* Ensures it remains on top */
+        }
+
+        /* Legend container to display budget categories */
+        .legend {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgb(250, 247, 247);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 800;
+        }
+
+        /* Styling for the page header */
+        header {
+            text-align: center;
+            padding: 15px;
+            background: rgb(225, 139, 153); 
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page header -->
+    <header>Welcome to My Yoga-yoga Map</header>
+
+    <!-- The map container where Mapbox will render the interactive map -->
+    <div id='map' class='map-container'></div>
+
+    <!-- The legend that displays budget categories for yoga studios -->
+    <div id='legend' class='legend'>
+        <h4>Annual Budget</h4>
+        <div><span style="background:#fd8d3c;width:10px;height:10px;display:inline-block;"></span> 💰 $</div>
+        <div><span style="background:#fc4e2a;width:10px;height:10px;display:inline-block;"></span> 💰💰 $$</div>
+        <div><span style="background:#e31a1c;width:10px;height:10px;display:inline-block;"></span> 💰💰💰 $$$</div>
+        <div><span style="background:#bd0026;width:10px;height:10px;display:inline-block;"></span> 💰💰💰💰 $$$$</div>
+        <div><span style="background:#800026;width:10px;height:10px;display:inline-block;"></span> 💰💰💰💰💰 $$$$$</div>
+    </div>
+
+    <!-- Search bar for finding locations on the map -->
+    <div class="map-search-container">
+        <label for="geocoder">Search for location</label>
+        <div id="geocoder" class="geocoder"></div>
+        <button type="button" class="btn btn-primary btn-sm" id="returnbutton">Return to full extent</button>
+    </div>
+
+    <!-- Sidebar for filtering data on the map -->
+    <div class="map-data-container">
+        <label class="option-label" for="layercheck">Filter map view</label>
+
+        <!-- Checkbox for toggling the visibility of the yoga studio layer -->
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="layercheck" checked>
+            <label class="form-check-label" for="layercheck">Show layer</label>
+        </div>
+
+        <!-- Checkbox for toggling the visibility of the legend -->
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="legendcheck">
+            <label class="form-check-label" for="legendcheck">Show legend</label>
+        </div>
+
+        <!-- Dropdown for filtering map by province or territory -->
+        <form>
+            <fieldset id="boundaryfieldset">
+                <label class="option-label">Select Province/Territory</label>
+                <select id="boundary" name="boundary">
+                    <option value="" disabled selected>Select boundary...</option>
+                    <option value="Ontario">Ontario</option>
+                    <option value="Quebec">Quebec</option>
+                    <option value="Yukon">Yukon</option>
+                    <option value="All">Show all</option>
+                </select>
+            </fieldset>
+        </form>
+    </div>
+
+    <!-- Import Bootstrap JavaScript for UI components -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Import external JavaScript file for map functionality -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+

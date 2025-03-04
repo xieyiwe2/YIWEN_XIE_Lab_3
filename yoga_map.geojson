@@ -1,0 +1,126 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "I AM Yoga",
+          "type": "Yoga Studio",
+          "price": "$20/class"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-79.38574440083805, 43.667304888092104]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Mindful Movement",
+          "type": "Yoga Studio",
+          "price": "$25/class"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-79.38826846562561, 43.6693375913153]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Yoga Tree",
+          "type": "Yoga Studio",
+          "price": "$22/class"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-79.3854762126954, 43.655199205625536]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Studio 4",
+          "type": "Yoga Studio",
+          "price": "$18/class"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-79.36895716830291, 43.65247988792751]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Studio 5",
+          "type": "Yoga Studio",
+          "price": "$30/class"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-79.37815482025269, 43.64867714340198]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Yoga Tree - Downtown",
+          "type": "Yoga Studio",
+          "price": "$28/class"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-79.39609208783693, 43.64720941324887]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "AT OM YOGA + PILATES",
+          "type": "Yoga Studio",
+          "price": "$35/class"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-79.40298526503084, 43.65552074480226]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "THETA Yoga",
+          "type": "Yoga Studio",
+          "price": "$22/class"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-79.40221571034856, 43.6580575122554]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Sivananda Yoga",
+          "type": "Yoga Studio",
+          "price": "$27/class"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-79.40364314410006, 43.662615931930844]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Kula Yoga Studio",
+          "type": "Yoga Studio",
+          "price": "$24/class"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-79.40641022834343, 43.66598313371745]
+        }
+      }
+    ]
+  }
+  

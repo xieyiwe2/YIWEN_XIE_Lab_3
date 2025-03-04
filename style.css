@@ -1,0 +1,110 @@
+/* Ensures the map fills the available space */
+.map-container {
+    position: absolute;
+    top: 60px; /* Prevents the header from overlapping the map */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px); /* Adjusts height to fit the screen */
+}
+
+/* Aligns the search bar and filter options on the left side */
+.map-controls-container {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    display: flex;
+    flex-direction: column; /* Arranges elements vertically */
+    gap: 10px; /* Adds spacing between elements */
+    z-index: 1000;
+}
+
+/* Ensures geocoder elements are aligned properly */
+.geocoder {
+    position: relative;
+    margin: 10px 0;
+}
+
+/* Expands the "Return to full extent" button to full width */
+#returnbutton {
+    position: relative;
+    margin: 10px 0;
+    width: 100%;
+}
+
+/* Positions the legend in the bottom-right corner */
+.legend {
+    position: absolute;
+    background-color: rgb(252, 252, 252); /* Light background for better readability */
+    color: black; /* Ensures text is clearly visible */
+    bottom: 10px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    max-width: 300px;
+    font-size: 14px;
+}
+
+/* Styles the legend title */
+.legend h4 {
+    margin: 0 0 10px;
+}
+
+/* Adds spacing between legend items */
+.legend div {
+    margin-bottom: 5px;
+}
+
+/* Styles the color indicators (small circles) in the legend */
+.legend span {
+    display: inline-block;
+    border-radius: 50%; /* Ensures circles are round */
+    height: 10px;
+    width: 10px;
+    margin-right: 5px;
+}
+
+/* Assigns different colors to the legend items */
+.legend div:nth-child(2) span { background-color: #fd8d3c; } /* Low budget */
+.legend div:nth-child(3) span { background-color: #fc4e2a; }
+.legend div:nth-child(4) span { background-color: #e31a1c; }
+.legend div:nth-child(5) span { background-color: #bd0026; }
+.legend div:nth-child(6) span { background-color: #800026; } /* High budget */
+
+/* Styles the header to ensure visibility and proper positioning */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #a80d7a; /* Dark magenta for emphasis */
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar styling for additional controls */
+aside {
+    position: absolute;
+    top: 60px; /* Ensures the sidebar is below the header */
+    left: 20px;
+    width: 350px;
+    height: calc(100% - 60px);
+    background: #fff;
+    border-right: 2px solid #ddd;
+    padding: 25px;
+    overflow-y: auto; /* Enables scrolling if content overflows */
+}
+
+/* Ensures the map takes up the remaining space beside the sidebar */
+#my-map {
+    position: absolute;
+    top: 60px;
+    left: 400px;
+    right: 0;
+    bottom: 0;
+}
+
